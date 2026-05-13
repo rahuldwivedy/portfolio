@@ -9,6 +9,7 @@ const skills = {
     { name: "Data Analysis", level: 80 },
     { name: "React", level: 55 },
     { name: "Git", level: 65 },
+    { name: "Power BI", level: 70 },
   ],
   strengths: ["Analytical Thinking", "Problem Solving", "Communication"],
 };
@@ -25,13 +26,13 @@ const projects = [
     tech: ["Python", "Pandas", "EDA"],
   },
   {
-    title: "Sales Data Analysis",
-    status: "upcoming",
-    tag: "In Progress",
+    title: "Drug Dataset Analysis",
+    status: "completed",
+    tag: "Data Analysis",
     description:
-      "Analyzing sales data to identify top-performing products, customer trends, and revenue insights using Python and visualization techniques.",
-    link: "#",
-    liveLink: null,
+      "Analyzed a drug dataset using Python (Pandas) to uncover trends in treatment outcomes. Created an interactive Power BI dashboard and presented insights using a structured presentation.",
+    link: "https://github.com/rahuldwivedy/Drug-Dataset-Analysis",
+    liveLink: "https://github.com/rahuldwivedy/Drug-Dataset-Analysis",
     tech: ["Python", "Visualization", "Pandas"],
   },
   {
@@ -425,14 +426,17 @@ export default function Portfolio() {
       {/* Hero */}
       <section className="hero">
         <div>
-          <p className="hero-tag">Data Analyst · Python · SQL</p>
+          {/* ✏️ CHANGED: added Power BI to the tag line */}
+          <p className="hero-tag">Data Analyst · Python · SQL · Power BI</p>
           <h1 className="hero-title">
             Hi, I'm<br />
             <em style={{ fontStyle: "italic", fontWeight: 400 }}>Riteendra</em>
           </h1>
+          {/* ✏️ CHANGED: more confident, specific description */}
           <p className="hero-desc">
-            Aspiring data analyst. I use Python and data analysis to extract
-            insights and support smarter decision-making.
+            Data analyst with hands-on experience in Python, SQL, and Power BI.
+            I turn raw data into clear insights — through clean analysis,
+            visual storytelling, and a sharp eye for patterns that matter.
           </p>
           <div className="hero-btns">
             <a href="#projects" className="btn-primary">View Projects</a>
@@ -441,8 +445,9 @@ export default function Portfolio() {
         </div>
         <div className="stats">
           {[
-            { label: "Projects Completed", value: "3+", dark: true },
-            { label: "Tools & Languages", value: "7", dark: false },
+            // ✏️ CHANGED: 4+ projects (you have 4 completed), 8 tools (added Power BI)
+            { label: "Projects Completed", value: "4+", dark: true },
+            { label: "Tools & Languages", value: "8", dark: false },
             { label: "Focus Area", value: "Data", dark: false },
           ].map((s, i) => (
             <div key={i} className="stat-card"
