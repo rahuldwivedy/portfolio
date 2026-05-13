@@ -59,7 +59,9 @@ const projects = [
 
 const styles = `
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body { background: #f5f0e8; }
+  #about, #projects, #skills, #contact { scroll-margin-top: 70px; }
 
   .portfolio {
     min-height: 100vh;
