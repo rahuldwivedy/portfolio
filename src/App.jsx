@@ -16,14 +16,14 @@ const skills = {
 
 const projects = [
   {
-    title: "Cereal Data Analysis",
+    title: "Referral Fraud Detection Pipeline",
     status: "completed",
-    tag: "Data Analysis",
+    tag: "Data Engineering",
     description:
-      "Cleaned and analyzed a cereal dataset using Pandas. Handled missing values, explored correlations, and identified trends — including the impact of sugar and fiber on product ratings.",
-    link: "https://github.com/rahuldwivedy",
-    liveLink: null,
-    tech: ["Python", "Pandas", "EDA"],
+      "Built an end-to-end ETL pipeline to detect fraudulent referral rewards for Springer Capital. Profiled 7 source tables, applied business logic to flag invalid rewards, and exported a 46-row fraud report. Containerized with Docker for reproducible execution.",
+    link: "https://github.com/rahuldwivedy/referral-fraud-detection-pipeline",
+    liveLink: "https://github.com/rahuldwivedy/referral-fraud-detection-pipeline",
+    tech: ["Python", "Pandas", "Docker", "ETL"],
   },
   {
     title: "Drug Dataset Analysis",
@@ -428,13 +428,11 @@ export default function Portfolio() {
       {/* Hero */}
       <section className="hero">
         <div>
-          {/* ✏️ CHANGED: added Power BI to the tag line */}
           <p className="hero-tag">Data Analyst · Python · SQL · Power BI</p>
           <h1 className="hero-title">
             Hi, I'm<br />
             <em style={{ fontStyle: "italic", fontWeight: 400 }}>Riteendra</em>
           </h1>
-          {/* ✏️ CHANGED: more confident, specific description */}
           <p className="hero-desc">
             Data analyst with hands-on experience in Python, SQL, and Power BI.
             I turn raw data into clear insights — through clean analysis,
@@ -447,7 +445,6 @@ export default function Portfolio() {
         </div>
         <div className="stats">
           {[
-            // ✏️ CHANGED: 4+ projects (you have 4 completed), 8 tools (added Power BI)
             { label: "Projects Completed", value: "4+", dark: true },
             { label: "Tools & Languages", value: "8", dark: false },
             { label: "Focus Area", value: "Data", dark: false },
