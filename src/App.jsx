@@ -36,6 +36,16 @@ const projects = [
     tech: ["Python", "Visualization", "Pandas"],
   },
   {
+    title: "Weather Agent",
+    status: "completed",
+    tag: "AI / Agents",
+    description:
+      "A command-line weather agent built with LangGraph that auto-detects your location via IP address and fetches real-time weather data — no API keys required. Uses a clean node-based state machine (fetch location → fetch weather → generate report) with personalized greetings based on time of day.",
+    link: "https://github.com/rahuldwivedy/weather-agent",
+    liveLink: "https://github.com/rahuldwivedy/weather-agent",
+    tech: ["Python", "LangGraph", "Pydantic", "APIs"],
+  },
+  {
     title: "Communion App",
     status: "completed",
     tag: "Web Dev",
@@ -428,7 +438,7 @@ export default function Portfolio() {
       {/* Hero */}
       <section className="hero">
         <div>
-          <p className="hero-tag">Data Analyst · Python · SQL · Power BI</p>
+          <p className="hero-tag">Data Analyst · Python · SQL · Power BI · LangGraph</p>
           <h1 className="hero-title">
             Hi, I'm<br />
             <em style={{ fontStyle: "italic", fontWeight: 400 }}>Riteendra</em>
@@ -445,7 +455,7 @@ export default function Portfolio() {
         </div>
         <div className="stats">
           {[
-            { label: "Projects Completed", value: "4+", dark: true },
+            { label: "Projects Completed", value: "5+", dark: true },
             { label: "Tools & Languages", value: "8", dark: false },
             { label: "Focus Area", value: "Data", dark: false },
           ].map((s, i) => (
@@ -497,10 +507,14 @@ export default function Portfolio() {
             {projects.map((p, i) => (
               <div key={i} className="project-card">
                 <div className="project-card-top">
-                  <span className="project-tag" style={{
-                    color: p.status === "upcoming" ? "#c9a85c" : "#7ecfb3",
-                    background: p.status === "upcoming" ? "rgba(201,168,92,0.15)" : "rgba(126,207,179,0.12)",
-                  }}>
+                  <span className="project-tag" style={
+                    p.tag === "AI / Agents"     ? { color: "#b48aff", background: "rgba(180,138,255,0.13)" } :
+                    p.tag === "Web Dev"          ? { color: "#f4a26b", background: "rgba(244,162,107,0.13)" } :
+                    p.tag === "Data Engineering" ? { color: "#7ecfb3", background: "rgba(126,207,179,0.12)" } :
+                    p.tag === "Data Analysis"    ? { color: "#5bb8e8", background: "rgba(91,184,232,0.13)"  } :
+                    p.status === "upcoming"      ? { color: "#c9a85c", background: "rgba(201,168,92,0.15)"  } :
+                                                   { color: "#7ecfb3", background: "rgba(126,207,179,0.12)" }
+                  }>
                     {p.tag}
                   </span>
                   <div className="project-links">
