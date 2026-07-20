@@ -16,6 +16,16 @@ const skills = {
 
 const projects = [
   {
+    title: "Sports Quiz Agent",
+    status: "completed",
+    tag: "AI / Agents",
+    description:
+      "A RAG-powered sports quiz generator built with Streamlit. Combines a ChromaDB vector store of historical facts with live DuckDuckGo web search, then grounds Google Gemini's output in that retrieved context to eliminate hallucinated stats — with instant right/wrong feedback and a ground-truth audit panel.",
+    link: "https://github.com/rahuldwivedy/Sports-Quiz",
+    liveLink: "https://sports-quiz-rkgnftrp3q4jzffv4ges4v.streamlit.app/",
+    tech: ["Python", "Streamlit", "ChromaDB", "RAG", "Gemini"],
+  },
+  {
     title: "Referral Fraud Detection Pipeline",
     status: "completed",
     tag: "Data Engineering",
@@ -455,7 +465,7 @@ export default function Portfolio() {
         </div>
         <div className="stats">
           {[
-            { label: "Projects Completed", value: "5+", dark: true },
+            { label: "Projects Completed", value: "6+", dark: true },
             { label: "Tools & Languages", value: "8", dark: false },
             { label: "Focus Area", value: "Data", dark: false },
           ].map((s, i) => (
