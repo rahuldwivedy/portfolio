@@ -36,6 +36,24 @@ const projects = [
     tech: ["Python", "Pandas", "Docker", "ETL"],
   },
   {
+    title: "From Surplus to Plate — Food Wastage Dashboard",
+    status: "completed",
+    tag: "Data Analysis",
+    description:
+      "Capstone Power BI dashboard studying two parallel points of food loss: India's PDS grain distribution (63K+ records, 34 states/UTs, 706 districts, 2017–2023) and institutional canteen/event waste (53,045 kg). Used DAX, Power Query and drill-down to show PDS efficiency rising from 44.9% to 90.9%, and that meat, baked goods and dairy drive 63% of institutional waste.",
+    link: "https://github.com/rahuldwivedy/From-Surplus-to-Plate-Where-India-s-Food-System-Loses-Food",
+    tech: ["Power BI", "DAX", "Power Query", "Excel"],
+  },
+  {
+    title: "SignBridge AI",
+    status: "completed",
+    tag: "Machine Learning",
+    description:
+      "Real-time ASL fingerspelling recognition from a webcam. Compared a pixel CNN (Sign MNIST) with a MediaPipe landmark classifier (21 keypoints, wrist-relative normalization) to close the domain gap, and served it through a live Streamlit demo. Flagged dataset leakage honestly and documented confusable letters.",
+    link: "https://github.com/rahuldwivedy/SignBridge-AI",
+    tech: ["Python", "TensorFlow", "MediaPipe", "OpenCV", "Streamlit"],
+  },
+  {
     title: "Drug Dataset Analysis",
     status: "completed",
     tag: "Data Analysis",
@@ -465,7 +483,7 @@ export default function Portfolio() {
         </div>
         <div className="stats">
           {[
-            { label: "Projects Completed", value: "6+", dark: true },
+            { label: "Projects Completed", value: "8+", dark: true },
             { label: "Tools & Languages", value: "8", dark: false },
             { label: "Focus Area", value: "Data", dark: false },
           ].map((s, i) => (
@@ -518,12 +536,13 @@ export default function Portfolio() {
               <div key={i} className="project-card">
                 <div className="project-card-top">
                   <span className="project-tag" style={
-                    p.tag === "AI / Agents"     ? { color: "#b48aff", background: "rgba(180,138,255,0.13)" } :
-                    p.tag === "Web Dev"          ? { color: "#f4a26b", background: "rgba(244,162,107,0.13)" } :
-                    p.tag === "Data Engineering" ? { color: "#7ecfb3", background: "rgba(126,207,179,0.12)" } :
-                    p.tag === "Data Analysis"    ? { color: "#5bb8e8", background: "rgba(91,184,232,0.13)"  } :
-                    p.status === "upcoming"      ? { color: "#c9a85c", background: "rgba(201,168,92,0.15)"  } :
-                                                   { color: "#7ecfb3", background: "rgba(126,207,179,0.12)" }
+                    p.tag === "AI / Agents"        ? { color: "#b48aff", background: "rgba(180,138,255,0.13)" } :
+                    p.tag === "Web Dev"            ? { color: "#f4a26b", background: "rgba(244,162,107,0.13)" } :
+                    p.tag === "Data Engineering"   ? { color: "#7ecfb3", background: "rgba(126,207,179,0.12)" } :
+                    p.tag === "Data Analysis"      ? { color: "#5bb8e8", background: "rgba(91,184,232,0.13)"  } :
+                    p.tag === "Machine Learning"   ? { color: "#ff8fa3", background: "rgba(255,143,163,0.13)" } :
+                    p.status === "upcoming"        ? { color: "#c9a85c", background: "rgba(201,168,92,0.15)"  } :
+                                                     { color: "#7ecfb3", background: "rgba(126,207,179,0.12)" }
                   }>
                     {p.tag}
                   </span>
