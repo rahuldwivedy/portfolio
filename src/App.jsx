@@ -54,6 +54,15 @@ const projects = [
     tech: ["Python", "TensorFlow", "MediaPipe", "OpenCV", "Streamlit"],
   },
   {
+    title: "Fake Job Posting Detection",
+    status: "completed",
+    tag: "Machine Learning",
+    description:
+      "ML classifier that flags fraudulent job listings across 17,880 postings (only 4.8% fake). Combined TF-IDF text features with 'missingness' signals like no company profile or logo, benchmarked four models with class-weighting, then tuned XGBoost and its decision threshold to reach F1 0.879, 86% recall, 90% precision and ROC-AUC 0.988.",
+    link: "https://github.com/rahuldwivedy/Fake-Job-Posting",
+    tech: ["Python", "XGBoost", "Scikit-learn", "TF-IDF", "Pandas"],
+  },
+  {
     title: "Drug Dataset Analysis",
     status: "completed",
     tag: "Data Analysis",
@@ -483,7 +492,7 @@ export default function Portfolio() {
         </div>
         <div className="stats">
           {[
-            { label: "Projects Completed", value: "8+", dark: true },
+            { label: "Projects Completed", value: "9+", dark: true },
             { label: "Tools & Languages", value: "8", dark: false },
             { label: "Focus Area", value: "Data", dark: false },
           ].map((s, i) => (
